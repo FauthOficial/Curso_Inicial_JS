@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(189, 92, 92);
+            font: normal 15pt;
+        }
+        section{
+            font: normal 14pt;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: black 5px 5px 10px ;
+
+        }
+        footer{
+            font: normal 14pt;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1> Testador Idade </h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Ano Nascimento</p>
+            <input type="number" name="txtano" id="txtano" min = "0">
+        </div>
+            <p>Sexo:
+                <input type="radio" name="radsx" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsx" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+
+        <div id = "res">
+            <p>Preencher para resultado</p>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>&copy; Fauth</p>
+
+    </footer>
+
+    <script>
+        function verificar(){
+        var Data = new Date()
+        var ano = Data.getFullYear()
+        var fAno = document.getElementById('txtano')
+        var res = document.getElementById('res')
+        
+        if (fAno.value.length == 0 || Number(fAno . value) > ano ){
+            window.alert('ERRO')
+        }else{
+            var fsex = document.getElementsByName('radsx')
+            var idade = ano - Number (fAno . value) 
+            var genero = ''
+            var img = document.createElement ('img')
+            img.setAttribute ('id' , 'foto')
+
+        if(fsex[0]. checked){
+                genero = 'homem'
+        if(idade >= 0 && idade < 10){
+            img.setAttribute('src' ,'https://tse2.mm.bing.net/th?id=OIP._ofswplfiQYu_88Mr58m9wHaC-&pid=Api&P=0&h=180' )
+        }else if(idade < 21){
+
+        }else if(idade < 50){
+
+        }else{
+
+        }
+
+        }else if(fsex[1].checked);{
+                genero = 'mulher'
+        }
+        if(idade >= 0 && idade < 10){
+
+        }else if(idade < 21){
+
+        }else if(idade < 50){
+
+        }else{
+
+        }
+
+
+
+        res.innerHTML = `Personalidade apresentada é de um/a ${genero} de ${idade} anos`
+        res.appendChild(img)
+        
+
+        }
+    }
+
+    </script>
+
+    
+</body>
+</html>

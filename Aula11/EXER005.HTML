@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>PERGUNTA</h1>
+    pais<input type="text" id="inputText">
+    <button onclick="verificarnacionalidade()">verificar</button>
+    <p id="resultado"></p>
+
+
+    <script>
+
+        function verificarnacionalidade(){
+            var texto = document.getElementById("inputText").value;
+
+            if(texto == "BRASIL"){
+                document.getElementById("resultado").innerHTML = "BRASILEIRO"
+            }else{
+                document.getElementById("resultado").innerHTML = "ESTRANGEIRO"
+            }
+            resultado.innerHTML += `<p>Vivendo no/em ${texto}</p>`
+
+
+
+
+
+
+
+        }
+    </script>
+    
+</body>
+</html>

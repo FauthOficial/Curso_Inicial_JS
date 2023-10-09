@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificar Nacionalidade</title>
+</head>
+<body>
+    <h1>Verificar Nacionalidade</h1>
+    <p>Insira um texto:</p>
+    <input type="text" id="inputText">
+    <button onclick="verificarNacionalidade()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarNacionalidade() {
+            // Obtém o texto inserido pelo usuário
+            var texto = document.getElementById("inputText").value;
+
+            // Converte o texto para maiúsculas para tornar a comparação sem distinção entre maiúsculas e minúsculas
+            texto = texto.toUpperCase();
+
+            // Verifica se o texto é "BRASIL"
+            if (texto === "BRASIL") {
+                document.getElementById("resultado").innerHTML = "BRASILEIRO";
+            } else {
+                document.getElementById("resultado").innerHTML = "ESTRANGEIRO";
+            }
+        }
+    </script>
+</body>
+</html>

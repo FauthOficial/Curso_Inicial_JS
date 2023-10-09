@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(189, 92, 92);
+            font: normal 15pt;
+        }
+        section{
+            font: normal 14pt;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: black 5px 5px 10px ;
+
+        }
+        footer{
+            font: normal 14pt;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body onload="Carregar()">
+
+    <header>
+        <h1> Teste relógio automatico </h1>
+    </header>
+
+    <section>
+
+        <div id = "msg">
+            <p>HORAS</p>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>&copy; Fauth</p>
+
+    </footer>
+
+    <script>
+        function Carregar(){
+        var msg = window.document.getElementById('msg')
+        var Data = new Date()
+        var hora = Data.getHours()
+        msg.innerHTML = `Agora são ${hora} Horas`
+        }
+        
+
+    </script>
+
+    
+</body>
+</html>

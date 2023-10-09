@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gray;
+            font-family: Verdana, Tahoma, sans-serif;
+        }
+
+        div#area{
+            background-color: antiquewhite;
+            border: 2px;
+            padding: 5px;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id = "area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interagir aqui
+    </div>
+
+<script>
+
+a.addEventListener('click', clicar)
+a.addEventListener('mouseenter', entrar)
+a.addEventListener('mouseout', sair)
+var a = window.document.getElementById('area')
+
+function clicar(){
+    a.style.background = 'red'
+    a.innerText = 'CLICOU'
+    }
+function entrar(){
+    a.innerText = 'ENTROU'
+    }
+function sair(){
+    a.innerText = 'SAIU'
+    a.style.background = 'antiquewhite'
+    }
+
+
+</script>
+
+
+</body>
+</html>

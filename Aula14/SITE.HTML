@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(189, 92, 92);
+            font: normal 15pt;
+        }
+        section{
+            font: normal 14pt;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: black 5px 5px 10px ;
+
+        }
+        footer{
+            font: normal 14pt;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1> CONTADOR </h1>
+    </header>
+
+    <section>
+        <div>
+            <p>INICIO</p>
+            <input type="number" name="txtinicio" id="txtinicio" min = "0">
+        </div>
+
+        <div>
+            <p>FIM</p>
+            <input type="number" name="txtfim" id="txtfim" min = "0">
+        </div>
+
+        <div>
+            <p>PASSO</p>
+            <input type="number" name="txtpasso" id="txtpasso" min = "0">
+        </div>
+    
+        <p>
+            <input type="button" value="Verificar" onclick="verificar()">
+        </p>
+
+        <div id = "res">
+            <p>Preparando contagem</p>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>&copy; Fauth</p>
+
+    </footer>
+
+    <script>
+        function verificar(){
+        var tn1 = document.getElementById('txtinicio')
+        var tn2 = document.getElementById('txtfim')
+        var tn3 = document.getElementById('txtpasso')
+        var res = document.getElementById('res')
+
+        if(tn1.value.length == 0 || tn2.value.length == 0 || tn3.value.length == 0){
+            window.alert('ERROR')
+        }else{
+            res.innerHTML = 'CONTANDO...'
+
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var n3 = Number(tn3.value)
+        
+        if(n3 <= 0){
+           
+            window.alert('INVALIDO... CONSIDERANDO "1" ')
+            n3 = 1
+        }
+        if(n1 < n2){
+            for(var c = n1 ; c <= n2; c += n3){
+        res.innerHTML += `${c} \u{1F449} `
+         }
+         res.innerHTML += `\u{1f3c1}`
+         }else{
+            for(var c = n1; c >= n2; c -= n3){
+                res.innerHTML += `${c} \u{1F449}`
+            }
+         }
+        
+        
+
+        }
+    }
+
+        
+        
+        
+        
+       
+        
+    </script>
+
+    
+</body>
+</html>
